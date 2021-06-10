@@ -1,11 +1,13 @@
+from travels import urls
+import travels
 from django.contrib import admin
 from django.urls import path
-from django.urls.conf import include  
-from . import views
+from django.urls.conf import include
 
 urlpatterns = [
+    path('travels/',include(travels.urls)),
     path('admin/', admin.site.urls),
-    path('about', views.about ),
-    path('travel_list', include(travels.urls)),
+
+    
     
 ]
