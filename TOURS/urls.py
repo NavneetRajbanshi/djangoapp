@@ -5,9 +5,7 @@ from django.urls import path
 from django.urls.conf import include
 
 urlpatterns = [
-    path('travels/',include(travels.urls)),
+    path('', include(travels.urls)),
     path('admin/', admin.site.urls),
-
-    
-    
+   
 ]
