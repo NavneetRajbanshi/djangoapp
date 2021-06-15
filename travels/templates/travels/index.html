@@ -1,5 +1,6 @@
 {% load static%}
-	<!DOCTYPE html>
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
 <html lang="en">
 ​
 <head>
@@ -236,7 +237,7 @@
 									<!-- Destination -->
 									<div class="col-md-4">
 										<div class="mu-featured-tours-single">
-											<img class="" src="{% static 'images/dubai.jpg' %}" alt="img">
+											<img class="" src="{{baseUrl}}/{{dest.img}}" alt="img">
 											<div class="mu-featured-tours-single-info">
 												<h3>{{dest.name}}</h3>
 												<h4> 2 Days, 3 Nights</h4>
@@ -247,12 +248,6 @@
 											</div>
 										</div>
 									</div>
-									
-									
-
-									
-									
-
 									{% endfor %}
 
 								</div>
