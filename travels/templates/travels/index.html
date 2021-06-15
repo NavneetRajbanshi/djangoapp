@@ -215,7 +215,9 @@
 			</div>
 		</section>
 		<!-- End Video -->
-​
+​		
+
+		
 		<!-- Start Featured Tours -->
 		<section id="mu-featured-tours">
 			<div class="container">
@@ -229,83 +231,29 @@
 							<div class="mu-featured-tours-content">
 								<div class="row">
 
+
+									{% for dest in dests %}
+									<!-- Destination -->
 									<div class="col-md-4">
-										
 										<div class="mu-featured-tours-single">
 											<img class="" src="{% static 'images/dubai.jpg' %}" alt="img">
 											<div class="mu-featured-tours-single-info">
-												<h3>Abu Dhabi</h3>
+												<h3>{{dest.name}}</h3>
 												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$650</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
+												<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
+												<span class="mu-price-tag">${{dest.price}}</span>
+												<p>{{dest.desc}}</p>
 												<a href="#" class="mu-book-now-btn">Book Now</a>
 											</div>
 										</div>
 									</div>
+									
+									
 
-									<div class="col-md-4">
-										<div class="mu-featured-tours-single">
-											<img class="" src="{% static 'images/thailand.jpg' %}" alt="img">
-											<div class="mu-featured-tours-single-info">
-												<h3>Thailand</h3>
-												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$845</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
-												<a href="#" class="mu-book-now-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
+									
+									
 
-									<div class="col-md-4">
-										<div class="mu-featured-tours-single">
-											<img class="" src="{% static 'images/france.jpg' %}" alt="img">
-											<div class="mu-featured-tours-single-info">
-												<h3>France</h3>
-												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$450</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
-												<a href="#" class="mu-book-now-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-										<div class="col-md-4">
-										<div class="mu-featured-tours-single">
-											<img class="" src="{% static 'images/switzerland.jpg' %}" alt="img">
-											<div class="mu-featured-tours-single-info">
-												<h3>Switzerland</h3>
-												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$1030</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
-												<a href="#" class="mu-book-now-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="mu-featured-tours-single">
-											<img class="" src="{% static 'images/italy.jpg' %}" alt="img">
-											<div class="mu-featured-tours-single-info">
-												<h3>Italy</h3>
-												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$650</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
-												<a href="#" class="mu-book-now-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="mu-featured-tours-single">
-											<img src="{% static 'images/england.jpg' %}" alt="img">
-											<div class="mu-featured-tours-single-info">
-												<h3>England</h3>
-												<h4> 2 Days, 3 Nights</h4>
-												<span class="mu-price-tag">$950</span>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quidem earum sed. Sint, magnam eligendi!</p>
-												<a href="#" class="mu-book-now-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
+									{% endfor %}
 
 								</div>
 							</div>
