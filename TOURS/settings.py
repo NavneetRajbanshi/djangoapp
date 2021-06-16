@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'travels',
+    'travels.apps.TravelsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'TOURS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'django',
+        'NAME': 'django',
         'USER': 'postgres',
         'PASSWORD': 'hero123',
         'HOST': 'localhost',
@@ -131,6 +131,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "assets")
+
+MEDIA_URL =     '/pics/'
+MEDIA_ROOT =    os.path.join(BASE_DIR, 'pics')
 
 
 
