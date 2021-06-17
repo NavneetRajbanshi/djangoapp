@@ -13,8 +13,10 @@ class Destination(models.Model):
 
 
 class Traveler(models.Model):
-    
-    review = models.CharField(max_length=300)
-    image = models.ImageField(upload_to='pics')
     travelername = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='pics')
     location = models.CharField(max_length=100)
+    review = models.CharField(max_length=300)
+    
+    
+    
