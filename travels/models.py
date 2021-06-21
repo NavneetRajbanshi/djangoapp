@@ -8,6 +8,9 @@ class Destination(models.Model):
     img = models.ImageField(upload_to='pics')
     desc = models.TextField()
     price = models.IntegerField()
+
+    def __str__(self):
+        return self.name
     
      
 
@@ -17,13 +20,19 @@ class Traveler(models.Model):
     image = models.ImageField(upload_to='pics')
     location = models.CharField(max_length=100)
     review = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
+    
     
 
 
 class Contact(models.Model):
-    customername = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     subject = models.CharField(max_length=100)
     message = models.TextField(max_length=300)
 
+    def __str__(self):
+        return self.name
     

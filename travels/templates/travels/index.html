@@ -366,7 +366,8 @@
 									<div class="col-md-12">
 										<div class="mu-contact-form-area">
 											<div id="form-messages"></div>
-											<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+											<form id="ajax-contact" method="post" action="{% url 'travel:aboutview' %}" class="mu-contact-form">
+												{% csrf_token %}
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">                
@@ -389,10 +390,11 @@
 													<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
 												</div>
 												<button type="submit" class="mu-send-msg-btn"><span>Send Message</span></button>
+												{% endfor %}
 								        	</form>
 										</div>
 									</div>
-									{% endfor %}
+									
 								</div>
 							</div>
 							<!-- End Contact Content -->

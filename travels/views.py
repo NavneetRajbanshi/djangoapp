@@ -1,5 +1,4 @@
 from os import name
-
 from django.core.checks import messages
 import travels
 from travels.models import Destination
@@ -11,10 +10,6 @@ def index(request):
 
     dests = Destination.objects.all()
     travelers = Traveler.objects.all()
-    contact = Contact.objects.all()   
+    
 
-
-    return render(request,'travels/index.html', {'dests': dests, 'travelers': travelers, 'contact': contact})
-
-  
-       
+    return render(request,'travels/index.html', {'dests': dests, 'travelers': travelers})
