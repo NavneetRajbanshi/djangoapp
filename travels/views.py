@@ -16,7 +16,7 @@ def index(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-        return HttpResponse("thank you for your interaction")
+        return HttpResponse("Thank you for your interaction")
 
     context = {'form': form}
     dests = Destination.objects.all()
