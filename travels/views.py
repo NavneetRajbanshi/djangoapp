@@ -6,7 +6,6 @@ from django.shortcuts import render
 from .models import Destination, Traveler
 from django.http import HttpResponse
 from .forms import ContactForm
-from django.views import View
 # Create your views here.
 def index(request):
     
