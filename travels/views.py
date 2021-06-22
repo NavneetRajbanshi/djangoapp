@@ -12,12 +12,13 @@ def index(request):
     form = ContactForm()
     
     if request.method == 'POST':
+        form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
 
     context = {'form': form}
     dests = Destination.objects.all()
-    travelers = Traveler.objects.all()
+    travelers = Traveler.objects.all() 
     
 
     return render(request,'travels/index.html', {'dests': dests, 'travelers': travelers, 'context': context})
